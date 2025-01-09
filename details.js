@@ -11,7 +11,7 @@ if (movie) {
   document.getElementById("detailsImage").src = movie.image;
   document.getElementById("detailsTitle").textContent = movie.name;
 
-  renderEpisodes();
+  loadEpisodes();
 }
 
 function toggleEpisode(episodeNumber) {
@@ -33,10 +33,10 @@ function toggleEpisode(episodeNumber) {
     localStorage.setItem("movies", JSON.stringify(movies));
   }
 
-  renderEpisodes();
+  loadEpisodes();
 }
 
-function renderEpisodes() {
+function loadEpisodes() {
   document.getElementById("detailsEpisodes").innerHTML = "";
 
   for (let i = 1; i <= movie.episodes; i++) {
@@ -72,4 +72,4 @@ window.addEventListener("beforeunload", () => {
   localStorage.setItem("selectedMovie", JSON.stringify(movie));
 });
 
-renderEpisodes();
+loadEpisodes();
