@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie and Series Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="app">
+    <h1>Movie and Series Tracker</h1>
+    <form id="addForm">
+      <input type="text" id="movieName" placeholder="Movie/Series Name" required>
+      <input type="text" id="imageUrl" placeholder="Image URL" required>
+      <input type="number" id="episodes" placeholder="Number of Episodes" min="1" required>
+      <select id="status">
+        <option value="watching">Watching</option>
+        <option value="watched">Watched</option>
+        <option value="toWatch">To Watch</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+    <div id="controls">
+      <input type="text" id="searchBar" placeholder="Search movies...">
+      <button id="searchButton">Search on Bflix</button>
+      <select id="filterStatus">
+        <option value="all">All</option>
+        <option value="watching">Watching</option>
+        <option value="watched">Watched</option>
+        <option value="toWatch">To Watch</option>
+      </select>
+    </div>
+    <div id="movieList"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
